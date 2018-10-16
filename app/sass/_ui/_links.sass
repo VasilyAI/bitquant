@@ -1,17 +1,32 @@
 // LINKS =====================================================
 .link
-	@extend .text
-	color: $sea
-	text-decoration: none
-	position: relative
-	z-index: 1000
-	&:hover
-		text-decoration: none
-		color: $red-light
-	&:focus
-		outline: none
-	&.-black
-		color: $black
-	&.-gray
-		color: $gray
+	margin: 0
+	padding: 0
+	margin-top: 30px
+
+	li
+		@extend .text
+		list-style-type: none
+		margin-bottom: 6px
+
+		&:last-child
+			margin-bottom: 0
+
+		a
+			position: relative
+			font-size: 13px
+			line-height: 28px
+			letter-spacing: 6px
+			color: #474854
+			text-decoration: none
+			z-index: 1000
+			transition: $ease
+
+			&:hover
+				text-decoration: none
+				color: $white
+
+			&:focus
+				outline: none
+
 //============================================================/
