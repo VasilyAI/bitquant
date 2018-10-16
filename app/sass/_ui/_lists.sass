@@ -3,14 +3,22 @@
 	padding-left: 0
 	margin: 0
 	li
+		@extend .text
 		position: relative
-		font-family: $font
-		font-size: 16px
-		line-height: 24px
-		color: $font-color
 		list-style-type: none
+		padding-left: 26px
 		&:last-child
 			margin-bottom: 0
+		&::before
+			position: absolute
+			content: ''
+			width: 4px
+			height: 4px
+			background-color: $sea
+			border: 1px solid $sea
+			border-radius: 100%
+			top: 13px
+			left: 0
 	&.-gray
 		li
 			color: $gray
