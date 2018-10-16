@@ -1,0 +1,414 @@
+// BUTTONS ===================================================
+.btn
+	position: relative
+	display: inline-block
+	font-family: $font
+	font-size: 15px
+	color: $dark
+	text-align: center
+	line-height: 100%
+	padding:
+		top: 14px
+		right: 23px
+		left: 23px
+	height: 44px
+	background: none
+	border: 2px solid $red
+	border-radius: 100px
+	transition: all 0.3s ease
+	text-decoration: none
+	z-index: 1000
+	&:hover
+		background: $red-light
+		border: 2px solid $red-light
+		text-decoration: none
+		color: $white
+	&:focus
+		border: 2px solid $dark
+		color: $dark
+		background: none
+		outline: none
+	&.-small
+		height: 35px
+		font-size: 14px
+		border: 1px solid $red
+		padding:
+			top: 11px
+			right: 17px
+			left: 17px
+		&:hover
+			background: $red-light
+			border: 1px solid $red-light
+			text-decoration: none
+			color: $white
+		&:focus
+			border: 1px solid $dark
+			color: $dark
+			background: none
+			outline: none
+	&.-little
+		height: 29px
+		font-size: 13px
+		border: 1px solid $red
+		padding:
+			top: 8px
+			right: 14px
+			left: 14px
+		&:hover
+			background: $red-light
+			border: 1px solid $red-light
+			text-decoration: none
+			color: $white
+		&:focus
+			border: 1px solid $dark
+			color: $dark
+			background: none
+			outline: none
+	&.-zero
+		border: 1px solid $white
+		box-shadow: 0px 0px 16px 0px rgba(197, 197, 199, 0.6)
+		padding:
+			top: 16px
+		&:hover
+			background: $white
+			border: 1px solid $light-gray
+			text-decoration: none
+			color: $dark
+			box-shadow: none
+		&:focus
+			border: 1px solid $white
+			box-shadow: 0px 2px 1px 0px rgba(212, 212, 212, 1) inset
+			color: $dark
+			background: none
+			outline: none
+	&.-red
+		border: 1px solid $red
+		background: $red
+		color: $white
+		height: 44px
+		padding:
+			top: 16px
+		&:hover
+			border: 1px solid $red-light
+			background: $red-light
+			text-decoration: none
+			color: $white
+		&:focus
+			border: 1px solid $red
+			box-shadow: 0px 2px 1px 0px rgba(178, 37, 37, 1) inset
+			color: $white
+			background: $red
+			outline: none
+	&.--black
+		border: 1px solid $black
+		background: $black
+		color: $white
+		&:hover
+			background: $dark
+			border: 1px solid $dark
+			text-decoration: none
+		&:focus
+			box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 1) inset
+			color: $white
+			background: $black
+			outline: none
+	&.--exit
+		background: $red
+		border: 1px solid $red
+		color: $white
+		text-align: left
+		padding:
+			left: 15px
+			right: 30px
+		&::after
+			position: absolute
+			content: '\e911'
+			font-family: icons
+			font-size: 14px
+			right: 10px
+			top: 6px
+		&:hover
+			background: $red-light
+			border: 1px solid $red-light
+			text-decoration: none
+		&:focus
+			background: $red
+			border: 1px solid $red
+			outline: none
+			color: $white
+	&.--small
+		background: $red
+		border: 1px solid $red
+		color: $white
+		text-align: left
+		height: 35px
+		font-size: 14px
+		padding:
+			top: 10px
+			right: 17px
+			left: 17px
+	&.-next
+		background: $green
+		border: 1px solid $green
+		color: $white
+		text-align: left
+		padding:
+			top: 15px
+			right: 62px
+			left: 26px
+		&::after
+			position: absolute
+			content: '\e90b'
+			font-size: 20px
+			font-family: icons
+			right: 26px
+			top: 14px
+		&:hover
+			background: $light-green
+			border: 1px solid $light-green
+			text-decoration: none
+		&:focus
+			background: $green
+			border: 1px solid $green
+			box-shadow: 0px 2px 1px 0px rgba(69, 143, 81, 1) inset
+			outline: none
+	&.-back
+		color: $black
+		text-align: right
+		padding:
+			top: 15px
+			right: 26px
+			left: 62px
+		&::before
+			position: absolute
+			content: '\e90b'
+			font-family: icons
+			font-size: 20px
+			left: 26px
+			top: 14px
+			transform: rotateY(180deg)
+		&:hover
+			text-decoration: none
+			color: $white
+		&:focus
+			outline: none
+			color: $black
+	&.-submit
+		background: $green
+		border: 1px solid $green
+		color: $white
+		text-align: left
+		padding:
+			top: 15px
+			right: 50px
+			left: 25px
+		&::after
+			position: absolute
+			content: '\e907'
+			font-family: icons
+			font-size: 20px
+			right: 18px
+			top: 14px
+		&:hover
+			background: $light-green
+			border: 1px solid $light-green
+			text-decoration: none
+		&:focus
+			background: $green
+			border: 1px solid $green
+			box-shadow: 0px 2px 1px 0px rgba(69, 143, 81, 1) inset
+			outline: none
+	&.-rubber
+		background: $green
+		border: 1px solid $green
+		color: $white
+		width: 100%
+		text-align: center
+		padding:
+			top: 5px
+			right: 25px
+			left: 25px
+		cursor: pointer
+		i
+			position: absolute
+			top: 11px
+			padding-left: 10px
+			font-family: icons
+			font-size: 22px
+		&:hover
+			background: $light-green
+			border: 1px solid $light-green
+			text-decoration: none
+		&:focus
+			background: $green
+			border: 1px solid $green
+			box-shadow: 0px 2px 1px 0px rgba(69, 143, 81, 1) inset
+			outline: none
+	&.-spec
+		background: none
+		border: 1px solid $medium-gray
+		color: $black
+		height: 35px
+		font-size: 14px
+		text-align: left
+		padding:
+			top: 11px
+			right: 18px
+			left: 18px
+		&:hover
+			color: $red
+	&.--edit
+		padding-right: 42px
+		&::before
+			position: absolute
+			content: ''
+			background-color: $medium-gray
+			width: 1px
+			height: 19px
+			top: 8px
+			right: 35px
+		&::after
+			position: absolute
+			font-family: icons
+			content: '\e908'
+			font-size: 16px
+			color: $red
+			top: 10px
+			right: 12px
+	&.--delete
+		padding-right: 42px
+		&::before
+			position: absolute
+			content: ''
+			background-color: $medium-gray
+			width: 1px
+			height: 19px
+			top: 8px
+			right: 33px
+		&::after
+			position: absolute
+			font-family: icons
+			content: '\e90c'
+			font-size: 16px
+			color: $red
+			top: 10px
+			right: 12px
+	&.--add-photo
+		padding-right: 42px
+		&::before
+			position: absolute
+			content: ''
+			background-color: $medium-gray
+			width: 1px
+			height: 19px
+			top: 8px
+			right: 36px
+		&::after
+			position: absolute
+			font-family: icons
+			content: '\e90a'
+			font-size: 17px
+			color: $red
+			top: 10px
+			right: 12px
+	&.--settings
+		padding-right: 42px
+		&::before
+			position: absolute
+			content: ''
+			background-color: $medium-gray
+			width: 1px
+			height: 19px
+			top: 8px
+			right: 33px
+		&::after
+			position: absolute
+			font-family: icons
+			content: '\e90d'
+			font-size: 15px
+			color: $red
+			top: 10px
+			right: 12px
+	&.--reset
+		background: $light-gray
+		border: 1px solid $light-gray
+		color: $dark
+		padding-right: 30px
+		&::after
+			position: absolute
+			font-family: icons
+			content: '\e901'
+			font-size: 9px
+			color: $black
+			top: 10px
+			right: 12px
+			transition: all 0.3s ease
+		&:hover
+			background: $red
+			border: 1px solid $red
+			color: $white
+			&::after
+				color: $white
+
+	&.-menu
+		background: $red
+		border: 1px solid $red
+		width: 44px
+		height: 44px
+		padding: 0
+		&:hover
+			background: $red-light
+			border: 1px solid $red-light
+		&::before
+			position: absolute
+			content: '\e905'
+			font-family: icons
+			font-size: 22px
+			color: $white
+			top: calc(50% - 7.5px)
+			left: calc(50% - 12px)
+	&.--close
+		position: relative
+		&::before
+			position: absolute
+			content: '\e901'
+			font-family: icons
+			font-size: 18px
+			color: $white
+			top: calc(50% - 7.5px)
+			left: calc(50% - 9px)
+	&.-circle
+		background: none
+		border: 1px solid $red
+		width: 35px
+		height: 35px
+		padding: 0
+		&::before
+			position: absolute
+			content: '\e903'
+			font-family: icons
+			font-size: 17px
+			color: $red
+			top: calc(50% - 7.5px)
+			left: calc(50% - 8.5px)
+			transition: all 0.3s ease
+		&:hover
+			background: $red-light
+			border: 1px solid $red-light
+			&::before
+				color: $white
+	&.--green
+		background: $green
+		border: 2px solid $green
+		color: $white
+		&:hover
+			background: rgba($light-green, 1)
+			border: 2px solid $light-green
+	&.--blue
+		border: 2px solid $sea
+		&:hover
+			background: $sea
+			border: 2px solid $sea
+			color: $white
+
+//============================================================/
