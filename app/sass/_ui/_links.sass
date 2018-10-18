@@ -16,7 +16,7 @@
 			position: relative
 			font-size: 13px
 			line-height: 28px
-			letter-spacing: 6px
+			letter-spacing: 0.78px
 			color: #474854
 			text-decoration: none
 			z-index: 1000
@@ -25,9 +25,13 @@
 			&:hover
 				text-decoration: none
 				color: $white
-				box-shadow: 0 0 20px 2px rgba(0,96,249, 1)
+				text-shadow: 0 9px 30px #0060f9
 
 			&:focus
+				outline: none
+
+			&.active
+				color: $white
 				outline: none
 
 //============================================================/

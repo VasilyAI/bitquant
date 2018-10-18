@@ -116,7 +116,7 @@
       position: relative;
       font-size: 13px;
       line-height: 28px;
-      letter-spacing: 6px;
+      letter-spacing: 0.78px;
       color: #474854;
       text-decoration: none;
       z-index: 1000;
@@ -124,8 +124,11 @@
       .link li a:hover {
         text-decoration: none;
         color: #ffffff;
-        box-shadow: 0 0 20px 2px #0060f9; }
+        text-shadow: 0 9px 30px #0060f9; }
       .link li a:focus {
+        outline: none; }
+      .link li a.active {
+        color: #ffffff;
         outline: none; }
 
 .list {
@@ -176,8 +179,9 @@
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  line-height: 62px;
+  line-height: 100%;
   letter-spacing: 4px;
+  padding-top: 20px;
   padding-right: 52px;
   padding-left: 52px;
   height: 62px;
@@ -314,7 +318,8 @@ select {
     z-index: 1; }
 
 .roadmap-wrapp .title, .roadmap-wrapp .main-list ol li, .main-list ol .roadmap-wrapp li {
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  margin-bottom: 10px; }
 .roadmap-wrapp .circle {
   position: relative;
   display: inline-block;
@@ -2225,6 +2230,8 @@ menu, p {
 
 .platform-content .text, .platform-content .link li, .link .platform-content li, .platform-content .list li, .list .platform-content li, .platform-content .list-roadmap li, .list-roadmap .platform-content li, .platform-content .roadmap-wrapp ul li, .roadmap-wrapp ul .platform-content li, .microfund-content .text, .microfund-content .link li, .link .microfund-content li, .microfund-content .list li, .list .microfund-content li, .microfund-content .list-roadmap li, .list-roadmap .microfund-content li, .microfund-content .roadmap-wrapp ul li, .roadmap-wrapp ul .microfund-content li, .demands-content .text, .demands-content .link li, .link .demands-content li, .demands-content .list li, .list .demands-content li, .demands-content .list-roadmap li, .list-roadmap .demands-content li, .demands-content .roadmap-wrapp ul li, .roadmap-wrapp ul .demands-content li {
   margin-bottom: 44px; }
+  .platform-content .text:last-child, .platform-content .link li:last-child, .link .platform-content li:last-child, .platform-content .list li:last-child, .list .platform-content li:last-child, .platform-content .list-roadmap li:last-child, .list-roadmap .platform-content li:last-child, .platform-content .roadmap-wrapp ul li:last-child, .roadmap-wrapp ul .platform-content li:last-child, .microfund-content .text:last-child, .microfund-content .link li:last-child, .link .microfund-content li:last-child, .microfund-content .list li:last-child, .list .microfund-content li:last-child, .microfund-content .list-roadmap li:last-child, .list-roadmap .microfund-content li:last-child, .microfund-content .roadmap-wrapp ul li:last-child, .roadmap-wrapp ul .microfund-content li:last-child, .demands-content .text:last-child, .demands-content .link li:last-child, .link .demands-content li:last-child, .demands-content .list li:last-child, .list .demands-content li:last-child, .demands-content .list-roadmap li:last-child, .list-roadmap .demands-content li:last-child, .demands-content .roadmap-wrapp ul li:last-child, .roadmap-wrapp ul .demands-content li:last-child {
+    margin-bottom: 0; }
 .platform-content .list li, .microfund-content .list li, .demands-content .list li {
   margin-bottom: 20px; }
   .platform-content .list li:last-child, .microfund-content .list li:last-child, .demands-content .list li:last-child {
@@ -2236,7 +2243,7 @@ menu, p {
 
 #section-prefooter {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-image: url("../img/bg-roadmap.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2275,12 +2282,58 @@ menu, p {
   margin-bottom: 100px;
   text-align: center; }
 
+#bottom-menu {
+  background-color: #05070F;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.menu-flex {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.footer-flex {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .footer-flex .logo {
+    display: inline-block; }
+  .footer-flex .social-network {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0; }
+    .footer-flex .social-network li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 20px; }
+      .footer-flex .social-network li img {
+        width: 16px;
+        height: auto; }
+
 /*==========  Desktop First  ========== */
 @media only screen and (max-width: 1920px) {
   /* */ }
 @media only screen and (max-width: 1680px) {
+  #header {
+    height: 81vh; }
+
+  #section-space {
+    height: 60vh; }
+
   /* */ }
 @media only screen and (max-width: 1440px) {
+  #header {
+    height: 70vh; }
+
+  #section-space {
+    height: 55vh; }
+
   /* */ }
 @media only screen and (max-width: 1366px) {
   /* */ }
@@ -2289,30 +2342,415 @@ menu, p {
 @media only screen and (max-width: 1234px) {
   /* */ }
 @media only screen and (max-width: 1200px) {
+  #header {
+    height: 60vh; }
+
+  .line-top {
+    margin-top: 50px;
+    margin-bottom: 120px; }
+
+  .demands-flex, .microfund-flex, .platform-flex {
+    margin-top: 100px; }
+
+  .platform .title.-subtitle, .platform .main-list ol li.-subtitle, .main-list ol .platform li.-subtitle {
+    margin-left: 160px; }
+
+  .demands .emphasis-left, .platform .emphasis-left {
+    margin-left: 160px; }
+
+  .demands .title.-subtitle, .demands .main-list ol li.-subtitle, .main-list ol .demands li.-subtitle {
+    margin-left: 160px; }
+
+  .microfund .title.-subtitle, .microfund .main-list ol li.-subtitle, .main-list ol .microfund li.-subtitle {
+    margin-right: 160px; }
+
+  .microfund .emphasis-right {
+    margin-right: 160px; }
+
+  #section-prefooter {
+    padding-top: 110px; }
+
+  .roadmap-title {
+    margin-top: 140px; }
+
+  .roadmap-wrapp .circle::after {
+    width: 235px; }
+
   /* */ }
 @media only screen and (max-width: 1199px) {
+  #header {
+    height: 57vh; }
+
   /* */ }
 @media only screen and (max-width: 1120px) {
   /* */ }
 @media only screen and (max-width: 1024px) {
+  #header {
+    height: 50vh; }
+
+  .roadmap-btn {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+
   /* */ }
 @media only screen and (max-width: 992px) {
+  .title, .main-list ol li {
+    font-size: 42px; }
+
+  .main-list .title, .main-list ol li {
+    font-size: 14px; }
+
+  .features-title {
+    margin-top: 100px; }
+
+  .platform-img {
+    width: 90%;
+    top: 70px; }
+
+  .microfund-img {
+    width: 110%;
+    top: 70px; }
+
+  .demands-img {
+    width: 90%;
+    top: 70px; }
+
+  .platform .title.-subtitle, .platform .main-list ol li.-subtitle, .main-list ol .platform li.-subtitle {
+    margin-left: 0; }
+
+  .demands .emphasis-left, .platform .emphasis-left {
+    margin-left: 0; }
+
+  .demands .title.-subtitle, .demands .main-list ol li.-subtitle, .main-list ol .demands li.-subtitle {
+    margin-left: 0; }
+
+  .microfund .title.-subtitle, .microfund .main-list ol li.-subtitle, .main-list ol .microfund li.-subtitle {
+    margin-right: 0; }
+
+  .microfund .emphasis-right {
+    margin-right: 0; }
+
+  .roadmap-wrapp .circle::after {
+    width: 175px; }
+
   /* */ }
 @media only screen and (max-width: 991px) {
   /* */ }
 @media only screen and (max-width: 768px) {
+  #header {
+    width: 100%;
+    height: 70vh;
+    background-image: url("../img/bg-header-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
   /* */ }
 @media only screen and (max-width: 767px) {
+  #section-space {
+    height: auto; }
+
+  #bottom-menu {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  .line-top {
+    margin-top: 36px;
+    margin-bottom: 70px; }
+
+  .main-title {
+    text-align: center;
+    margin-bottom: 20px; }
+
+  .main-title .-title-promo {
+    font-size: 9vmin; }
+
+  .block-content {
+    margin-top: 64px; }
+
+  .demands-flex, .microfund-flex, .platform-flex {
+    margin-top: 70px; }
+
+  .platform {
+    text-align: center; }
+
+  .platform .title.-subtitle, .platform .main-list ol li.-subtitle, .main-list ol .platform li.-subtitle {
+    text-align: left; }
+
+  .platform .platform-img {
+    position: static;
+    width: 60%;
+    margin-bottom: 32px; }
+
+  .microfund {
+    text-align: center; }
+
+  .microfund .title.-subtitle, .microfund .main-list ol li.-subtitle, .main-list ol .microfund li.-subtitle {
+    text-align: right; }
+
+  .microfund .microfund-img {
+    position: static;
+    width: 80%; }
+
+  .demands {
+    text-align: center; }
+
+  .demands .title.-subtitle, .demands .main-list ol li.-subtitle, .main-list ol .demands li.-subtitle {
+    text-align: left; }
+
+  .demands .demands-img {
+    position: static;
+    width: 60%;
+    margin-bottom: 32px; }
+
+  .prefooter-title .title, .prefooter-title .main-list ol li, .main-list ol .prefooter-title li {
+    width: 100%;
+    float: none;
+    text-align: left;
+    margin-right: 0; }
+
+  .prefooter-info .text, .prefooter-info .link li, .link .prefooter-info li, .prefooter-info .list li, .list .prefooter-info li, .prefooter-info .list-roadmap li, .list-roadmap .prefooter-info li, .prefooter-info .roadmap-wrapp ul li, .roadmap-wrapp ul .prefooter-info li {
+    width: 100%;
+    margin-left: 0;
+    font-size: 19px;
+    top: 30px; }
+
+  .roadmap-wrapp {
+    margin-bottom: 50px; }
+
+  .roadmap-wrapp .circle-end::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    background-color: #453B35;
+    width: 264px;
+    height: 1px;
+    top: 4.5px;
+    left: 9px; }
+
+  .roadmap-wrapp .circle::after {
+    width: 264px; }
+
+  .roadmap-btn {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+
+  .menu-flex .wrapp-block {
+    margin-bottom: 20px; }
+
+  .wrapp-block .link {
+    margin-top: 10px; }
+
+  .wrapp-block .link li {
+    display: inline-block;
+    margin-right: 5px; }
+
   /* */ }
 @media only screen and (max-width: 575px) {
+  #header {
+    width: 100%;
+    height: auto;
+    background-image: url("../img/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
+  .line-top {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+  .main-title .-title-promo {
+    font-size: 11vmin;
+    margin-bottom: 36px; }
+
+  .main-list ol li {
+    display: inline-block;
+    margin-right: 10px; }
+
+  .social-nav {
+    display: none; }
+
+  .scroll-down {
+    display: none; }
+
+  #section-space {
+    padding: 0 20px 0 20px; }
+
+  #section-features {
+    padding: 0 20px 0 20px; }
+
+  #section-prefooter {
+    padding: 40px 20px 0 20px; }
+
+  .roadmap-title {
+    margin-top: 80px;
+    margin-bottom: 40px; }
+
+  .roadmap-wrapp {
+    margin-bottom: 30px; }
+
+  .roadmap-btn {
+    margin-top: 10px;
+    margin-bottom: 50px; }
+
+  #bottom-menu {
+    padding: 20px 20px 0; }
+
+  #footer {
+    padding: 0 20px 0 20px; }
+
+  .menu-flex .wrapp-block {
+    text-align: center; }
+
+  /* */ }
+@media only screen and (max-width: 480px) {
   /* */ }
 @media only screen and (max-width: 440px) {
   /* */ }
 @media only screen and (max-width: 425px) {
+  .title, .main-list ol li {
+    font-size: 8vmin;
+    line-height: 40px; }
+
+  .title.-subtitle, .main-list ol li.-subtitle {
+    font-size: 5vmin; }
+
+  .main-list .title, .main-list ol li {
+    font-size: 14px; }
+
+  .features-title {
+    margin-top: 60px; }
+
+  .demands-flex, .microfund-flex, .platform-flex {
+    margin-top: 36px; }
+
+  .platform-content .text, .platform-content .link li, .link .platform-content li, .platform-content .list li, .list .platform-content li, .platform-content .list-roadmap li, .list-roadmap .platform-content li, .platform-content .roadmap-wrapp ul li, .roadmap-wrapp ul .platform-content li {
+    margin-bottom: 20px; }
+
+  .microfund-content .text, .microfund-content .link li, .link .microfund-content li, .microfund-content .list li, .list .microfund-content li, .microfund-content .list-roadmap li, .list-roadmap .microfund-content li, .microfund-content .roadmap-wrapp ul li, .roadmap-wrapp ul .microfund-content li {
+    margin-bottom: 20px; }
+
+  .demands-content .text, .demands-content .link li, .link .demands-content li, .demands-content .list li, .list .demands-content li, .demands-content .list-roadmap li, .list-roadmap .demands-content li, .demands-content .roadmap-wrapp ul li, .roadmap-wrapp ul .demands-content li {
+    margin-bottom: 20px; }
+
+  .roadmap-btn {
+    margin-bottom: 30px; }
+
   /* */ }
 @media only screen and (max-width: 375px) {
+  .main-title .-title-promo {
+    font-size: 12vmin; }
+
+  .main-list ol li {
+    display: block;
+    margin-right: 0; }
+
+  .block-content img {
+    width: 60px; }
+
+  .block-content .title.-subtitle, .block-content .main-list ol li.-subtitle, .main-list ol .block-content li.-subtitle {
+    padding-left: 80px; }
+
+  .block-content .text, .block-content .link li, .link .block-content li, .block-content .list li, .list .block-content li, .block-content .list-roadmap li, .list-roadmap .block-content li, .block-content .roadmap-wrapp ul li, .roadmap-wrapp ul .block-content li {
+    padding-left: 80px; }
+
+  .title, .main-list ol li {
+    font-size: 9vmin;
+    line-height: 37px; }
+
+  .main-list .title, .main-list ol li {
+    font-size: 14px; }
+
+  .block-content {
+    margin-top: 40px; }
+
+  .text, .link li, .list li, .list-roadmap li, .roadmap-wrapp ul li {
+    font-size: 4.4vmin; }
+
+  .wrapp-block .link li a {
+    font-size: 3.8vmin; }
+
+  .footer-flex .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14px; }
+
+  .footer-flex .social-network {
+    width: 100%;
+    text-align: center; }
+
+  .btn {
+    padding-top: 16px;
+    height: 54px; }
+
   /* */ }
 @media only screen and (max-width: 320px) {
+  .main-title .-title-promo {
+    font-size: 14vmin;
+    line-height: 44px;
+    text-align: left;
+    margin-bottom: 30px; }
+
+  .main-list ol li {
+    margin-bottom: 0; }
+
+  .main-list ol li span {
+    font-size: 16px; }
+
+  .main-btn {
+    margin-top: 30px;
+    margin-bottom: 40px; }
+
+  .text, .link li, .list li, .list-roadmap li, .roadmap-wrapp ul li {
+    font-size: 5vmin; }
+
+  .title.-subtitle, .main-list ol li.-subtitle {
+    font-size: 5.5vmin; }
+
+  .title, .main-list ol li {
+    font-size: 9vmin;
+    line-height: 30px; }
+
+  .main-list .title, .main-list ol li {
+    font-size: 16px; }
+
+  .block-content {
+    margin-top: 30px; }
+
+  .block-content .title.-subtitle, .block-content .main-list ol li.-subtitle, .main-list ol .block-content li.-subtitle {
+    margin-bottom: 8px; }
+
+  .features-title {
+    margin-top: 40px; }
+
+  .platform-content .list li {
+    margin-bottom: 10px; }
+
+  .demands-content .list li {
+    margin-bottom: 10px; }
+
+  .prefooter-info .text, .prefooter-info .link li, .link .prefooter-info li, .prefooter-info .list li, .list .prefooter-info li, .prefooter-info .list-roadmap li, .list-roadmap .prefooter-info li, .prefooter-info .roadmap-wrapp ul li, .roadmap-wrapp ul .prefooter-info li {
+    font-size: 17px;
+    top: 20px; }
+
+  .roadmap-title {
+    margin-bottom: 30px; }
+
+  .roadmap-wrapp {
+    margin-bottom: 30px; }
+
+  .roadmap-wrapp .title, .roadmap-wrapp .main-list ol li, .main-list ol .roadmap-wrapp li {
+    margin-bottom: 0; }
+
+  .roadmap-wrapp ul {
+    margin-top: 10px; }
+
+  .roadmap-wrapp ul li {
+    margin-bottom: 10px; }
+
+  .roadmap-wrapp ul li a::before {
+    left: 3px; }
+
   /* */ }
 
 /*# sourceMappingURL=main.css.map */

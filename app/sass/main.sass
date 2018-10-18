@@ -195,6 +195,8 @@ menu, p
 .platform-content, .microfund-content, .demands-content
 	.text
 		margin-bottom: 44px
+		&:last-child
+			margin-bottom: 0
 	.list
 		li
 			margin-bottom: 20px
@@ -208,7 +210,7 @@ menu, p
 
 #section-prefooter
 	width: 100%
-	height: 100vh
+	height: auto
 	background-image: url("../img/bg-roadmap.png")
 	background-repeat: no-repeat
 	background-size: cover
@@ -251,6 +253,44 @@ menu, p
 		bottom: 100px
 	text-align: center
 
+#bottom-menu
+	background-color: #05070F
+	padding:
+		top: 80px
+		bottom: 80px
+
+.menu-flex
+	display: flex
+	width: 100%
+	flex-wrap: wrap
+	justify-content: space-between
+
+
+.footer-flex
+	display: flex
+	width: 100%
+	height: auto
+	flex-wrap: wrap
+	justify-content: space-between
+	padding:
+		top: 30px
+		bottom: 30px
+
+	.logo
+		display: inline-block
+
+	.social-network
+		display: inline-block
+		float: right
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			display: inline-block
+			margin-right: 20px
+			img
+				width: 16px
+				height: auto
 
 
 @import "media"
